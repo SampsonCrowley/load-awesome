@@ -1,7 +1,7 @@
 {
   "name": "load-awesome-relative",
   "title": "Load Awesome, redone with Relative Sizing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Load Awesome using relative sizing",
   "homepage": "http://github.danielcardoso.net/load-awesome/",
   "repository": "https://github.com/danielcardoso/load-awesome-relative",
