@@ -1,0 +1,116 @@
+/*!
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
+ * Licensed under MIT
+ */
+@import './mixins/template'
+
++template('.la-ball-8bits', 6px)
+  display inline-block
+  float none
+  background-color currentColor
+  border 0 solid currentColor
+  position absolute
+  top 50%
+  left 50%
+  min-width (100%/3)
+  min-height (100%/3)
+  border-radius 0
+  opacity 0
+  transform translate(100%, 100%)
+  animation ball-8bits 1s 0s ease infinite
+
+  &:nth-child(1)
+    animation-delay -.9375s
+    top -100%
+    left 0
+
+  &:nth-child(2)
+    animation-delay -.875s
+    top -100%
+    left 33.3333333333%
+
+  &:nth-child(3)
+    animation-delay -.8125s
+    top -66.6666666667%
+    left 66.6666666667%
+
+  &:nth-child(4)
+    animation-delay -.75s
+    top -33.3333333333%
+    left 100%
+
+  &:nth-child(5)
+    animation-delay -.6875s
+    top 0
+    left 100%
+
+  &:nth-child(6)
+    animation-delay -.625s
+    top 33.3333333333%
+    left 100%
+
+  &:nth-child(7)
+    animation-delay -.5625s
+    top 66.6666666667%
+    left 66.6666666667%
+
+  &:nth-child(8)
+    animation-delay -.5s
+    top 100%
+    left 33.3333333333%
+
+  &:nth-child(9)
+    animation-delay -.4375s
+    top 100%
+    left 0
+
+  &:nth-child(10)
+    animation-delay -.375s
+    top 100%
+    left -33.3333333333%
+
+  &:nth-child(11)
+    animation-delay -.3125s
+    top 66.6666666667%
+    left -66.6666666667%
+
+  &:nth-child(12)
+    animation-delay -.25s
+    top 33.3333333333%
+    left -100%
+
+  &:nth-child(13)
+    animation-delay -.1875s
+    top 0
+    left -100%
+
+  &:nth-child(14)
+    animation-delay -.125s
+    top -33.3333333333%
+    left -100%
+
+  &:nth-child(15)
+    animation-delay -.0625s
+    top -66.6666666667%
+    left -66.6666666667%
+
+  &:nth-child(16)
+    animation-delay 0s
+    top -100%
+    left -33.3333333333%
+
+/*
+ * Animation
+ */
+
+@keyframes ball-8bits
+  0%
+    opacity 1
+
+  50%
+    opacity 1
+
+  51%
+    opacity 0

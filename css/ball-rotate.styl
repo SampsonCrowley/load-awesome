@@ -1,0 +1,92 @@
+/*!
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
+ * Licensed under MIT
+ */
+@import './mixins/add-view'
+
+$color-1 = #fff
+$color-2 = #333
+
+.la-ball-rotate
+.la-ball-rotate > div
+  position relative
+  box-sizing border-box
+
+.la-ball-rotate
+  display block
+  font-size 0
+  color $color-1
+  width 10px
+  height 10px
+
+  &.la-dark
+    color $color-2
+
+  >div
+    display inline-block
+    float none
+    background-color currentColor
+    border 0 solid currentColor
+    width 10px
+    height 10px
+    border-radius 100%
+    animation ball-rotate-animation 1s cubic-bezier(.7, -.13, .22, .86) infinite
+
+    &:before
+      top 0
+      left -150%
+
+    &:after
+      top 0
+      left 150%
+
+  &.la-sm
+    width 4px
+    height 4px
+
+    >div
+      width 4px
+      height 4px
+
+  &.la-2x
+    width 20px
+    height 20px
+
+    >div
+      width 20px
+      height 20px
+
+  &.la-3x
+    width 30px
+    height 30px
+
+    >div
+      width 30px
+      height 30px
+
+.la-ball-rotate > div:before
+.la-ball-rotate > div:after
+  position absolute
+  width inherit
+  height inherit
+  margin inherit
+  content ""
+  background currentColor
+  border-radius inherit
+  opacity .8
+
+/*
+ * Animation
+ */
+
+@keyframes ball-rotate-animation
+  0%
+    transform rotate(0deg)
+
+  50%
+    transform rotate(180deg)
+
+  100%
+    transform rotate(360deg)

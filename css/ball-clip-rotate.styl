@@ -1,0 +1,34 @@
+/*!
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
+ * Licensed under MIT
+ */
+@import './mixins/template'
+
++template('.la-ball-clip-rotate', 16px)
+  display inline-block
+  float none
+  background-color currentColor
+  border 0 solid currentColor
+  width 100%
+  height 100%
+  background transparent
+  border-width 2px
+  border-bottom-color transparent
+  border-radius 100%
+  animation ball-clip-rotate .75s linear infinite
+  
+/*
+ * Animation
+ */
+
+@keyframes ball-clip-rotate
+  0%
+    transform rotate(0deg)
+
+  50%
+    transform rotate(180deg)
+
+  100%
+    transform rotate(360deg)

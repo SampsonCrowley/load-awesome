@@ -1,0 +1,107 @@
+/*!
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
+ * Licensed under MIT
+ */
+@import './mixins/template'
+
+for class in '.la-ball-fusion' '.la-ball-fussion'
+  +template(class, 4px)
+    display inline-block
+    float none
+    background-color currentColor
+    border 0 solid currentColor
+    position absolute
+    width 12px
+    height 12px
+    border-radius 100%
+    transform translate(-50%, -50%)
+    animation ball-fusion-ball1 1s 0s ease infinite
+
+    &:nth-child(1)
+      top 0
+      left 50%
+      z-index 1
+
+    &:nth-child(2)
+      top 50%
+      left 100%
+      z-index 2
+      animation-name ball-fusion-ball2
+
+    &:nth-child(3)
+      top 100%
+      left 50%
+      z-index 1
+      animation-name ball-fusion-ball3
+
+    &:nth-child(4)
+      top 50%
+      left 0
+      z-index 2
+      animation-name ball-fusion-ball4
+
+/*
+ * Animations
+ */
+
+@keyframes ball-fusion-ball1
+  0%
+    opacity .35
+
+  50%
+    top -100%
+    left 200%
+    opacity 1
+
+  100%
+    top 50%
+    left 100%
+    z-index 2
+    opacity .35
+
+@keyframes ball-fusion-ball2
+  0%
+    opacity .35
+
+  50%
+    top 200%
+    left 200%
+    opacity 1
+
+  100%
+    top 100%
+    left 50%
+    z-index 1
+    opacity .35
+
+@keyframes ball-fusion-ball3
+  0%
+    opacity .35
+
+  50%
+    top 200%
+    left -100%
+    opacity 1
+
+  100%
+    top 50%
+    left 0
+    z-index 2
+    opacity .35
+
+@keyframes ball-fusion-ball4
+  0%
+    opacity .35
+
+  50%
+    top -100%
+    left -100%
+    opacity 1
+
+  100%
+    top 0
+    left 50%
+    z-index 1
+    opacity .35

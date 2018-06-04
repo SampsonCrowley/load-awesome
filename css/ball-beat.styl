@@ -1,0 +1,34 @@
+/*!
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
+ * Licensed under MIT
+ */
+@import './mixins/template'
+
++template('.la-ball-beat', 32px, 0.25)
+  display inline-block
+  float none
+  background-color currentColor
+  border 0 solid currentColor
+  width 15.625%
+  height 62.5%
+  margin 6.25%
+  border-radius 100%
+  animation ball-beat .7s -.15s infinite linear
+
+  &:nth-child(2n-1)
+    animation-delay -.5s
+
+/*
+ * Animation
+ */
+
+@keyframes ball-beat
+  50%
+    opacity .2
+    transform scale(.75)
+
+  100%
+    opacity 1
+    transform scale(1)

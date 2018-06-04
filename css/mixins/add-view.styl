@@ -1,0 +1,29 @@
+add-view(base, percentage = 1)
+  for num in 2 3 4 6 8
+    &.la-{num}x
+      max-width (base * num)
+      max-height (base * percentage * num)
+
+  &.la-vh
+    max-width (100vh / percentage)
+    max-height 100vh
+
+  &.la-vh-half
+    max-width (50vh / percentage)
+    max-height 50vh
+
+  &.la-vh-sm
+    max-width (25vh / percentage)
+    max-height 25vh
+
+  &.la-vw
+    max-width 100vw
+    max-height (100vw * percentage)
+
+  &.la-vw-half
+    max-width 50vw
+    max-height (50vw * percentage)
+
+  &.la-vw-sm
+    max-width 25vw
+    max-height (50vw * percentage)

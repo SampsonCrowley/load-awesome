@@ -1,0 +1,100 @@
+/*!
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
+ * Licensed under MIT
+ */
+@import './mixins/add-view'
+
+$color-1 = #fff
+$color-2 = #333
+
+.la-ball-fall
+.la-ball-fall > div
+  position relative
+  box-sizing border-box
+
+.la-ball-fall
+  display block
+  font-size 0
+  color $color-1
+  width 54px
+  height 18px
+
+  &.la-dark
+    color $color-2
+
+  >div
+    display inline-block
+    float none
+    background-color currentColor
+    border 0 solid currentColor
+    width 10px
+    height 10px
+    margin 4px
+    border-radius 100%
+    opacity 0
+    animation ball-fall 1s ease-in-out infinite
+
+    &:nth-child(1)
+      animation-delay -200ms
+
+    &:nth-child(2)
+      animation-delay -100ms
+
+    &:nth-child(3)
+      animation-delay 0ms
+
+  &.la-sm
+    width 26px
+    height 8px
+
+    >div
+      width 4px
+      height 4px
+      margin 2px
+
+  &.la-2x
+    width 108px
+    height 36px
+
+    >div
+      width 20px
+      height 20px
+      margin 8px
+
+  &.la-3x
+    width 162px
+    height 54px
+
+    >div
+      width 30px
+      height 30px
+      margin 12px
+
+/*
+ * Animation
+ */
+
+@keyframes ball-fall
+  0%
+    opacity 0
+    transform translateY(-145%)
+
+  10%
+    opacity .5
+
+  20%
+    opacity 1
+    transform translateY(0)
+
+  80%
+    opacity 1
+    transform translateY(0)
+
+  90%
+    opacity .5
+
+  100%
+    opacity 0
+    transform translateY(145%)

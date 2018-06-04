@@ -1,0 +1,90 @@
+/*!
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
+ * Licensed under MIT
+ */
+@import './mixins/add-view'
+
+$color-1 = #fff
+$color-2 = #333
+$color-3 = #000
+
+.la-square-jelly-box
+.la-square-jelly-box > div
+  position relative
+  box-sizing border-box
+
+.la-square-jelly-box
+  display block
+  font-size 0
+  color $color-1
+  width 32px
+  height 32px
+
+  &.la-dark
+    color $color-2
+
+  >div
+    display inline-block
+    float none
+    background-color currentColor
+    border 0 solid currentColor
+
+    &:nth-child(1)
+      top -25%
+      z-index 1
+      height 100%
+      border-radius 10%
+      animation square-jelly-box-animate .6s -.1s linear infinite
+
+    &:nth-child(2)
+      bottom -9%
+      height 10%
+      background $color-3
+      border-radius 50%
+      opacity .2
+      animation square-jelly-box-shadow .6s -.1s linear infinite
+
+  &.la-sm
+    width 16px
+    height 16px
+
+  &.la-2x
+    width 64px
+    height 64px
+
+  &.la-3x
+    width 96px
+    height 96px
+
+.la-square-jelly-box > div:nth-child(1)
+.la-square-jelly-box > div:nth-child(2)
+  position absolute
+  left 0
+  width 100%
+
+/*
+ * Animations
+ */
+
+@keyframes square-jelly-box-animate
+  17%
+    border-bottom-right-radius 10%
+
+  25%
+    transform translateY(25%) rotate(22.5deg)
+
+  50%
+    border-bottom-right-radius 100%
+    transform translateY(50%) scale(1, .9) rotate(45deg)
+
+  75%
+    transform translateY(25%) rotate(67.5deg)
+
+  100%
+    transform translateY(0) rotate(90deg)
+
+@keyframes square-jelly-box-shadow
+  50%
+    transform scale(1.25, 1)

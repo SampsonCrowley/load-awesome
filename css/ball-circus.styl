@@ -1,0 +1,51 @@
+/*!
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
+ * Licensed under MIT
+ */
+@import './mixins/template'
+
++template('.la-ball-circus', 8px)
+  display inline-block
+  float none
+  background-color currentColor
+  border 0 solid currentColor
+  position absolute
+  top 0
+  left -100%
+  display block
+  min-width 16px
+  min-width 100%
+  min-height 16px
+  min-height 100%
+  border-radius 100%
+  opacity .5
+  animation ball-circus-position 2.5s infinite cubic-bezier(.25, 0, .75, 1), ball-circus-size 2.5s infinite cubic-bezier(.25, 0, .75, 1)
+
+  &:nth-child(1)
+    animation-delay 0s, -.5s
+
+  &:nth-child(2)
+    animation-delay -.5s, -1s
+
+  &:nth-child(3)
+    animation-delay -1s, -1.5s
+
+  &:nth-child(4)
+    animation-delay -1.5s, -2s
+
+  &:nth-child(5)
+    animation-delay -2s, -2.5s
+
+/*
+ * Animations
+ */
+
+@keyframes ball-circus-position
+  50%
+    left 100%
+
+@keyframes ball-circus-size
+  50%
+    transform scale(.3, .3)

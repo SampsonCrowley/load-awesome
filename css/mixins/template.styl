@@ -1,0 +1,26 @@
+@import './add-view'
+
+
+
+template($class, $base = 16px, $percentage = 1, $color-1 = #fff, $color-2 = #333)
+  {$class},
+  {$class} > div
+    position relative
+    box-sizing border-box
+
+  {$class}
+    display block
+    font-size 0
+    color $color-1
+    height: 10000px
+    width: 10000px
+    max-width $base
+    max-height $base * $percentage
+
+    &.la-dark
+      color $color-2
+
+    >div
+      {block}
+
+    add-view($base, $percentage)

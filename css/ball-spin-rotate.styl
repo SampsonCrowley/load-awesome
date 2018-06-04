@@ -1,0 +1,70 @@
+/*!
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
+ * Licensed under MIT
+ */
+@import './mixins/add-view'
+
+$color-1 = #fff
+$color-2 = #333
+
+.la-ball-spin-rotate
+.la-ball-spin-rotate > div
+  position relative
+  box-sizing border-box
+
+.la-ball-spin-rotate
+  display block
+  font-size 0
+  color $color-1
+  width 32px
+  height 32px
+  animation ball-spin-rotate 2s infinite linear
+
+  &.la-dark
+    color $color-2
+
+  >div
+    display inline-block
+    float none
+    background-color currentColor
+    border 0 solid currentColor
+    position absolute
+    top 0
+    width 60%
+    height 60%
+    border-radius 100%
+    animation ball-spin-bounce 2s infinite ease-in-out
+
+    &:last-child
+      top auto
+      bottom 0
+      animation-delay -1.0s
+
+  &.la-sm
+    width 16px
+    height 16px
+
+  &.la-2x
+    width 64px
+    height 64px
+
+  &.la-3x
+    width 96px
+    height 96px
+
+/*
+ * Animations
+ */
+
+@keyframes ball-spin-rotate
+  100%
+    transform rotate(360deg)
+
+@keyframes ball-spin-bounce
+  0%
+    transform scale(0)
+
+  50%
+    transform scale(1)

@@ -1,0 +1,89 @@
+/*!
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
+ * Licensed under MIT
+ */
+@import './mixins/add-view'
+
+$color-1 = #fff
+$color-2 = #333
+
+.la-cog
+.la-cog > div
+  position relative
+  box-sizing border-box
+
+.la-cog
+  display block
+  font-size 0
+  color $color-1
+  width 31px
+  height 31px
+
+  &.la-dark
+    color $color-2
+
+  >div
+    display inline-block
+    float none
+    background-color currentColor
+    border 0 solid currentColor
+    width 100%
+    height 100%
+    background-color transparent
+    border-style dashed
+    border-width 2px
+    border-radius 100%
+    animation cog-rotate 4s linear infinite
+
+    &:after
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      content ""
+      border 2px solid currentColor
+      border-radius 100%
+
+  &.la-sm
+    width 15px
+    height 15px
+
+    >div
+      border-width 1px
+
+      &:after
+        border-width 1px
+
+  &.la-2x
+    width 61px
+    height 61px
+
+    >div
+      border-width 4px
+
+      &:after
+        border-width 4px
+
+  &.la-3x
+    width 91px
+    height 91px
+
+    >div
+      border-width 6px
+
+      &:after
+        border-width 6px
+
+/*
+ * Animation
+ */
+
+@keyframes cog-rotate
+  0%
+    transform rotate(0deg)
+
+  100%
+    transform rotate(360deg)

@@ -1,323 +1,319 @@
-/*!
- * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+
+/* line 116 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+
+/* line 1 : /home/samps/sites/personal/load-awesome-relative/node_modules/stylus/lib/functions/index.styl */
+
+/* line 1 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+/*
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
  * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
  * Licensed under MIT
  */
+
+/* line 297 : /home/samps/sites/personal/load-awesome-relative/node_modules/stylus/lib/functions/index.styl */
+
+/* line 26 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
+
+/* line 26 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
+
+/* line 1 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+
+/* line 6 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
 .la-ball-8bits,
 .la-ball-8bits > div {
-    position: relative;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+  position: relative;
+  box-sizing: border-box;
 }
 
+/* line 11 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
 .la-ball-8bits {
-    display: block;
-    font-size: 0;
-    color: #fff;
+  display: block;
+  font-size: 0;
+  color: #fff;
+  height: 10000px;
+  width: 10000px;
+  max-width: 6px;
+  max-height: 6px;
 }
 
+/* line 20 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
 .la-ball-8bits.la-dark {
-    color: #333;
+  color: #333;
 }
 
-.la-ball-8bits > div {
-    display: inline-block;
-    float: none;
-    background-color: currentColor;
-    border: 0 solid currentColor;
+/* line 23 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
+.la-ball-8bits >div {
+  display: inline-block;
+  float: none;
+  background-color: currentColor;
+  border: 0 solid currentColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 33.333333333333336%;
+  min-height: 33.333333333333336%;
+  border-radius: 0;
+  opacity: 0;
+  transform: translate(100%, 100%);
+  animation: ball-8bits 1s 0s ease infinite;
 }
 
-.la-ball-8bits {
-    width: 12px;
-    height: 12px;
+/* line 24 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(1) {
+  animation-delay: -0.9375s;
+  top: -100%;
+  left: 0;
 }
 
-.la-ball-8bits > div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 4px;
-    height: 4px;
-    border-radius: 0;
-    opacity: 0;
-    -webkit-transform: translate(100%, 100%);
-       -moz-transform: translate(100%, 100%);
-        -ms-transform: translate(100%, 100%);
-         -o-transform: translate(100%, 100%);
-            transform: translate(100%, 100%);
-    -webkit-animation: ball-8bits 1s 0s ease infinite;
-       -moz-animation: ball-8bits 1s 0s ease infinite;
-         -o-animation: ball-8bits 1s 0s ease infinite;
-            animation: ball-8bits 1s 0s ease infinite;
+/* line 29 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(2) {
+  animation-delay: -0.875s;
+  top: -100%;
+  left: 33.3333333333%;
 }
 
-.la-ball-8bits > div:nth-child(1) {
-    -webkit-animation-delay: -.9375s;
-       -moz-animation-delay: -.9375s;
-         -o-animation-delay: -.9375s;
-            animation-delay: -.9375s;
+/* line 34 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(3) {
+  animation-delay: -0.8125s;
+  top: -66.6666666667%;
+  left: 66.6666666667%;
 }
 
-.la-ball-8bits > div:nth-child(2) {
-    -webkit-animation-delay: -.875s;
-       -moz-animation-delay: -.875s;
-         -o-animation-delay: -.875s;
-            animation-delay: -.875s;
+/* line 39 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(4) {
+  animation-delay: -0.75s;
+  top: -33.3333333333%;
+  left: 100%;
 }
 
-.la-ball-8bits > div:nth-child(3) {
-    -webkit-animation-delay: -.8125s;
-       -moz-animation-delay: -.8125s;
-         -o-animation-delay: -.8125s;
-            animation-delay: -.8125s;
+/* line 44 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(5) {
+  animation-delay: -0.6875s;
+  top: 0;
+  left: 100%;
 }
 
-.la-ball-8bits > div:nth-child(4) {
-    -webkit-animation-delay: -.75s;
-       -moz-animation-delay: -.75s;
-         -o-animation-delay: -.75s;
-            animation-delay: -.75s;
+/* line 49 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(6) {
+  animation-delay: -0.625s;
+  top: 33.3333333333%;
+  left: 100%;
 }
 
-.la-ball-8bits > div:nth-child(5) {
-    -webkit-animation-delay: -.6875s;
-       -moz-animation-delay: -.6875s;
-         -o-animation-delay: -.6875s;
-            animation-delay: -.6875s;
+/* line 54 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(7) {
+  animation-delay: -0.5625s;
+  top: 66.6666666667%;
+  left: 66.6666666667%;
 }
 
-.la-ball-8bits > div:nth-child(6) {
-    -webkit-animation-delay: -.625s;
-       -moz-animation-delay: -.625s;
-         -o-animation-delay: -.625s;
-            animation-delay: -.625s;
+/* line 59 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(8) {
+  animation-delay: -0.5s;
+  top: 100%;
+  left: 33.3333333333%;
 }
 
-.la-ball-8bits > div:nth-child(7) {
-    -webkit-animation-delay: -.5625s;
-       -moz-animation-delay: -.5625s;
-         -o-animation-delay: -.5625s;
-            animation-delay: -.5625s;
+/* line 64 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(9) {
+  animation-delay: -0.4375s;
+  top: 100%;
+  left: 0;
 }
 
-.la-ball-8bits > div:nth-child(8) {
-    -webkit-animation-delay: -.5s;
-       -moz-animation-delay: -.5s;
-         -o-animation-delay: -.5s;
-            animation-delay: -.5s;
+/* line 69 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(10) {
+  animation-delay: -0.375s;
+  top: 100%;
+  left: -33.3333333333%;
 }
 
-.la-ball-8bits > div:nth-child(9) {
-    -webkit-animation-delay: -.4375s;
-       -moz-animation-delay: -.4375s;
-         -o-animation-delay: -.4375s;
-            animation-delay: -.4375s;
+/* line 74 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(11) {
+  animation-delay: -0.3125s;
+  top: 66.6666666667%;
+  left: -66.6666666667%;
 }
 
-.la-ball-8bits > div:nth-child(10) {
-    -webkit-animation-delay: -.375s;
-       -moz-animation-delay: -.375s;
-         -o-animation-delay: -.375s;
-            animation-delay: -.375s;
+/* line 79 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(12) {
+  animation-delay: -0.25s;
+  top: 33.3333333333%;
+  left: -100%;
 }
 
-.la-ball-8bits > div:nth-child(11) {
-    -webkit-animation-delay: -.3125s;
-       -moz-animation-delay: -.3125s;
-         -o-animation-delay: -.3125s;
-            animation-delay: -.3125s;
+/* line 84 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(13) {
+  animation-delay: -0.1875s;
+  top: 0;
+  left: -100%;
 }
 
-.la-ball-8bits > div:nth-child(12) {
-    -webkit-animation-delay: -.25s;
-       -moz-animation-delay: -.25s;
-         -o-animation-delay: -.25s;
-            animation-delay: -.25s;
+/* line 89 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(14) {
+  animation-delay: -0.125s;
+  top: -33.3333333333%;
+  left: -100%;
 }
 
-.la-ball-8bits > div:nth-child(13) {
-    -webkit-animation-delay: -.1875s;
-       -moz-animation-delay: -.1875s;
-         -o-animation-delay: -.1875s;
-            animation-delay: -.1875s;
+/* line 94 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(15) {
+  animation-delay: -0.0625s;
+  top: -66.6666666667%;
+  left: -66.6666666667%;
 }
 
-.la-ball-8bits > div:nth-child(14) {
-    -webkit-animation-delay: -.125s;
-       -moz-animation-delay: -.125s;
-         -o-animation-delay: -.125s;
-            animation-delay: -.125s;
+/* line 99 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+.la-ball-8bits >div:nth-child(16) {
+  animation-delay: 0s;
+  top: -100%;
+  left: -33.3333333333%;
 }
 
-.la-ball-8bits > div:nth-child(15) {
-    -webkit-animation-delay: -.0625s;
-       -moz-animation-delay: -.0625s;
-         -o-animation-delay: -.0625s;
-            animation-delay: -.0625s;
-}
-
-.la-ball-8bits > div:nth-child(16) {
-    -webkit-animation-delay: 0s;
-       -moz-animation-delay: 0s;
-         -o-animation-delay: 0s;
-            animation-delay: 0s;
-}
-
-.la-ball-8bits > div:nth-child(1) {
-    top: -100%;
-    left: 0;
-}
-
-.la-ball-8bits > div:nth-child(2) {
-    top: -100%;
-    left: 33.3333333333%;
-}
-
-.la-ball-8bits > div:nth-child(3) {
-    top: -66.6666666667%;
-    left: 66.6666666667%;
-}
-
-.la-ball-8bits > div:nth-child(4) {
-    top: -33.3333333333%;
-    left: 100%;
-}
-
-.la-ball-8bits > div:nth-child(5) {
-    top: 0;
-    left: 100%;
-}
-
-.la-ball-8bits > div:nth-child(6) {
-    top: 33.3333333333%;
-    left: 100%;
-}
-
-.la-ball-8bits > div:nth-child(7) {
-    top: 66.6666666667%;
-    left: 66.6666666667%;
-}
-
-.la-ball-8bits > div:nth-child(8) {
-    top: 100%;
-    left: 33.3333333333%;
-}
-
-.la-ball-8bits > div:nth-child(9) {
-    top: 100%;
-    left: 0;
-}
-
-.la-ball-8bits > div:nth-child(10) {
-    top: 100%;
-    left: -33.3333333333%;
-}
-
-.la-ball-8bits > div:nth-child(11) {
-    top: 66.6666666667%;
-    left: -66.6666666667%;
-}
-
-.la-ball-8bits > div:nth-child(12) {
-    top: 33.3333333333%;
-    left: -100%;
-}
-
-.la-ball-8bits > div:nth-child(13) {
-    top: 0;
-    left: -100%;
-}
-
-.la-ball-8bits > div:nth-child(14) {
-    top: -33.3333333333%;
-    left: -100%;
-}
-
-.la-ball-8bits > div:nth-child(15) {
-    top: -66.6666666667%;
-    left: -66.6666666667%;
-}
-
-.la-ball-8bits > div:nth-child(16) {
-    top: -100%;
-    left: -33.3333333333%;
-}
-
-.la-ball-8bits.la-sm {
-    width: 6px;
-    height: 6px;
-}
-
-.la-ball-8bits.la-sm > div {
-    width: 2px;
-    height: 2px;
-}
-
+/* line 3 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
 .la-ball-8bits.la-2x {
-    width: 24px;
-    height: 24px;
+  max-width: 12px;
+  max-height: 12px;
 }
 
-.la-ball-8bits.la-2x > div {
-    width: 8px;
-    height: 8px;
-}
-
+/* line 3 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
 .la-ball-8bits.la-3x {
-    width: 36px;
-    height: 36px;
+  max-width: 18px;
+  max-height: 18px;
 }
 
-.la-ball-8bits.la-3x > div {
-    width: 12px;
-    height: 12px;
+/* line 3 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-8bits.la-4x {
+  max-width: 24px;
+  max-height: 24px;
 }
 
+/* line 3 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-8bits.la-6x {
+  max-width: 36px;
+  max-height: 36px;
+}
+
+/* line 3 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-8bits.la-8x {
+  max-width: 48px;
+  max-height: 48px;
+}
+
+/* line 7 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-8bits.la-vh {
+  max-width: 100vh;
+  max-height: 100vh;
+}
+
+/* line 11 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-8bits.la-vh-half {
+  max-width: 50vh;
+  max-height: 50vh;
+}
+
+/* line 15 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-8bits.la-vh-sm {
+  max-width: 25vh;
+  max-height: 25vh;
+}
+
+/* line 19 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-8bits.la-vw {
+  max-width: 100vw;
+  max-height: 100vw;
+}
+
+/* line 23 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-8bits.la-vw-half {
+  max-width: 50vw;
+  max-height: 50vw;
+}
+
+/* line 27 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-8bits.la-vw-sm {
+  max-width: 25vw;
+  max-height: 50vw;
+}
+
+/* line 104 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
 /*
  * Animation
  */
-@-webkit-keyframes ball-8bits {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    51% {
-        opacity: 0;
-    }
-}
+
+/* line 108 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
 @-moz-keyframes ball-8bits {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    51% {
-        opacity: 0;
-    }
+
+/* line 109 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  0% {
+    opacity: 1;
+  }
+
+/* line 112 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  50% {
+    opacity: 1;
+  }
+
+/* line 115 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  51% {
+    opacity: 0;
+  }
 }
+
+/* line 108 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+@-webkit-keyframes ball-8bits {
+
+/* line 109 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  0% {
+    opacity: 1;
+  }
+
+/* line 112 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  50% {
+    opacity: 1;
+  }
+
+/* line 115 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  51% {
+    opacity: 0;
+  }
+}
+
+/* line 108 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
 @-o-keyframes ball-8bits {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    51% {
-        opacity: 0;
-    }
+
+/* line 109 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  0% {
+    opacity: 1;
+  }
+
+/* line 112 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  50% {
+    opacity: 1;
+  }
+
+/* line 115 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  51% {
+    opacity: 0;
+  }
 }
+
+/* line 108 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
 @keyframes ball-8bits {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    51% {
-        opacity: 0;
-    }
+
+/* line 109 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  0% {
+    opacity: 1;
+  }
+
+/* line 112 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  50% {
+    opacity: 1;
+  }
+
+/* line 115 : /home/samps/sites/personal/load-awesome-relative/css/ball-8bits.styl */
+  51% {
+    opacity: 0;
+  }
 }

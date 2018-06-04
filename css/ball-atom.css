@@ -1,285 +1,343 @@
-/*!
- * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+
+/* line 297 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+
+/* line 1 : /home/samps/sites/personal/load-awesome-relative/node_modules/stylus/lib/functions/index.styl */
+
+/* line 1 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+/*
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
  * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
  * Licensed under MIT
  */
+
+/* line 26 : /home/samps/sites/personal/load-awesome-relative/node_modules/stylus/lib/functions/index.styl */
+
+/* line 89 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
+
+/* line 29 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
+
+/* line 1 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+
+/* line 6 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
 .la-ball-atom,
 .la-ball-atom > div {
-    position: relative;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+  position: relative;
+  box-sizing: border-box;
 }
 
+/* line 11 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
 .la-ball-atom {
-    display: block;
-    font-size: 0;
-    color: #fff;
+  display: block;
+  font-size: 0;
+  color: #fff;
+  height: 10000px;
+  width: 10000px;
+  max-width: 16px;
+  max-height: 16px;
 }
 
+/* line 20 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
 .la-ball-atom.la-dark {
-    color: #333;
+  color: #333;
 }
 
-.la-ball-atom > div {
-    display: inline-block;
-    float: none;
-    background-color: currentColor;
-    border: 0 solid currentColor;
+/* line 23 : /home/samps/sites/personal/load-awesome-relative/css/mixins/template.styl */
+.la-ball-atom >div {
+  display: inline-block;
+  float: none;
+  background-color: currentColor;
+  border: 0 solid currentColor;
 }
 
-.la-ball-atom {
-    width: 32px;
-    height: 32px;
+/* line 15 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+.la-ball-atom >div:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  min-width: 60%;
+  min-height: 60%;
+  background: #aaa;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  animation: ball-atom-shrink 4.5s infinite linear;
 }
 
-.la-ball-atom > div:nth-child(1) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    width: 60%;
-    height: 60%;
-    background: #aaa;
-    border-radius: 100%;
-    -webkit-transform: translate(-50%, -50%);
-       -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-         -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-animation: ball-atom-shrink 4.5s infinite linear;
-       -moz-animation: ball-atom-shrink 4.5s infinite linear;
-         -o-animation: ball-atom-shrink 4.5s infinite linear;
-            animation: ball-atom-shrink 4.5s infinite linear;
+/* line 27 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+.la-ball-atom >div:not(:nth-child(1)) {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+  animation: ball-atom-zindex 1.5s 0s infinite steps(2, end);
 }
 
-.la-ball-atom > div:not(:nth-child(1)) {
-    position: absolute;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    background: none;
-    -webkit-animation: ball-atom-zindex 1.5s 0s infinite steps(2, end);
-       -moz-animation: ball-atom-zindex 1.5s 0s infinite steps(2, end);
-         -o-animation: ball-atom-zindex 1.5s 0s infinite steps(2, end);
-            animation: ball-atom-zindex 1.5s 0s infinite steps(2, end);
+/* line 36 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+.la-ball-atom >div:not(:nth-child(1)):before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 30%;
+  min-height: 30%;
+  margin-top: -15%;
+  margin-left: -15%;
+  content: "";
+  background: currentColor;
+  border-radius: 50%;
+  opacity: 0.75;
+  animation: ball-atom-position 1.5s 0s infinite ease, ball-atom-size 1.5s 0s infinite ease;
 }
 
-.la-ball-atom > div:not(:nth-child(1)):before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    margin-top: -5px;
-    margin-left: -5px;
-    content: "";
-    background: currentColor;
-    border-radius: 50%;
-    opacity: .75;
-    -webkit-animation: ball-atom-position 1.5s 0s infinite ease, ball-atom-size 1.5s 0s infinite ease;
-       -moz-animation: ball-atom-position 1.5s 0s infinite ease, ball-atom-size 1.5s 0s infinite ease;
-         -o-animation: ball-atom-position 1.5s 0s infinite ease, ball-atom-size 1.5s 0s infinite ease;
-            animation: ball-atom-position 1.5s 0s infinite ease, ball-atom-size 1.5s 0s infinite ease;
+/* line 50 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+.la-ball-atom >div:nth-child(2) {
+  animation-delay: 0.75s;
 }
 
-.la-ball-atom > div:nth-child(2) {
-    -webkit-animation-delay: .75s;
-       -moz-animation-delay: .75s;
-         -o-animation-delay: .75s;
-            animation-delay: .75s;
+/* line 53 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+.la-ball-atom >div:nth-child(2):before {
+  animation-delay: 0s, -1.125s;
 }
 
-.la-ball-atom > div:nth-child(2):before {
-    -webkit-animation-delay: 0s, -1.125s;
-       -moz-animation-delay: 0s, -1.125s;
-         -o-animation-delay: 0s, -1.125s;
-            animation-delay: 0s, -1.125s;
+/* line 56 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+.la-ball-atom >div:nth-child(3) {
+  transform: rotate(120deg);
+  animation-delay: -0.25s;
 }
 
-.la-ball-atom > div:nth-child(3) {
-    -webkit-transform: rotate(120deg);
-       -moz-transform: rotate(120deg);
-        -ms-transform: rotate(120deg);
-         -o-transform: rotate(120deg);
-            transform: rotate(120deg);
-    -webkit-animation-delay: -.25s;
-       -moz-animation-delay: -.25s;
-         -o-animation-delay: -.25s;
-            animation-delay: -.25s;
+/* line 60 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+.la-ball-atom >div:nth-child(3):before {
+  animation-delay: -1s, -0.75s;
 }
 
-.la-ball-atom > div:nth-child(3):before {
-    -webkit-animation-delay: -1s, -.75s;
-       -moz-animation-delay: -1s, -.75s;
-         -o-animation-delay: -1s, -.75s;
-            animation-delay: -1s, -.75s;
+/* line 63 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+.la-ball-atom >div:nth-child(4) {
+  transform: rotate(240deg);
+  animation-delay: 0.25s;
 }
 
-.la-ball-atom > div:nth-child(4) {
-    -webkit-transform: rotate(240deg);
-       -moz-transform: rotate(240deg);
-        -ms-transform: rotate(240deg);
-         -o-transform: rotate(240deg);
-            transform: rotate(240deg);
-    -webkit-animation-delay: .25s;
-       -moz-animation-delay: .25s;
-         -o-animation-delay: .25s;
-            animation-delay: .25s;
+/* line 67 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+.la-ball-atom >div:nth-child(4):before {
+  animation-delay: -0.5s, -0.125s;
 }
 
-.la-ball-atom > div:nth-child(4):before {
-    -webkit-animation-delay: -.5s, -.125s;
-       -moz-animation-delay: -.5s, -.125s;
-         -o-animation-delay: -.5s, -.125s;
-            animation-delay: -.5s, -.125s;
-}
-
-.la-ball-atom.la-sm {
-    width: 16px;
-    height: 16px;
-}
-
-.la-ball-atom.la-sm > div:not(:nth-child(1)):before {
-    width: 4px;
-    height: 4px;
-    margin-top: -2px;
-    margin-left: -2px;
-}
-
+/* line 3 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
 .la-ball-atom.la-2x {
-    width: 64px;
-    height: 64px;
+  max-width: 32px;
+  max-height: 32px;
 }
 
-.la-ball-atom.la-2x > div:not(:nth-child(1)):before {
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;
-    margin-left: -10px;
-}
-
+/* line 3 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
 .la-ball-atom.la-3x {
-    width: 96px;
-    height: 96px;
+  max-width: 48px;
+  max-height: 48px;
 }
 
-.la-ball-atom.la-3x > div:not(:nth-child(1)):before {
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-    margin-left: -15px;
+/* line 3 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-atom.la-4x {
+  max-width: 64px;
+  max-height: 64px;
 }
 
+/* line 3 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-atom.la-6x {
+  max-width: 96px;
+  max-height: 96px;
+}
+
+/* line 3 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-atom.la-8x {
+  max-width: 128px;
+  max-height: 128px;
+}
+
+/* line 7 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-atom.la-vh {
+  max-width: 100vh;
+  max-height: 100vh;
+}
+
+/* line 11 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-atom.la-vh-half {
+  max-width: 50vh;
+  max-height: 50vh;
+}
+
+/* line 15 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-atom.la-vh-sm {
+  max-width: 25vh;
+  max-height: 25vh;
+}
+
+/* line 19 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-atom.la-vw {
+  max-width: 100vw;
+  max-height: 100vw;
+}
+
+/* line 23 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-atom.la-vw-half {
+  max-width: 50vw;
+  max-height: 50vw;
+}
+
+/* line 27 : /home/samps/sites/personal/load-awesome-relative/css/mixins/add-view.styl */
+.la-ball-atom.la-vw-sm {
+  max-width: 25vw;
+  max-height: 50vw;
+}
+
+/* line 70 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 /*
  * Animations
  */
-@-webkit-keyframes ball-atom-position {
-    50% {
-        top: 100%;
-        left: 100%;
-    }
-}
+
+/* line 74 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @-moz-keyframes ball-atom-position {
-    50% {
-        top: 100%;
-        left: 100%;
-    }
+
+/* line 75 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    top: 100%;
+    left: 100%;
+  }
 }
+
+/* line 74 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+@-webkit-keyframes ball-atom-position {
+
+/* line 75 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    top: 100%;
+    left: 100%;
+  }
+}
+
+/* line 74 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @-o-keyframes ball-atom-position {
-    50% {
-        top: 100%;
-        left: 100%;
-    }
+
+/* line 75 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    top: 100%;
+    left: 100%;
+  }
 }
+
+/* line 74 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @keyframes ball-atom-position {
-    50% {
-        top: 100%;
-        left: 100%;
-    }
+
+/* line 75 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    top: 100%;
+    left: 100%;
+  }
 }
 
-@-webkit-keyframes ball-atom-size {
-    50% {
-        -webkit-transform: scale(.5, .5);
-                transform: scale(.5, .5);
-    }
-}
-
+/* line 79 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @-moz-keyframes ball-atom-size {
-    50% {
-        -moz-transform: scale(.5, .5);
-             transform: scale(.5, .5);
-    }
+
+/* line 80 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    transform: scale(0.5, 0.5);
+  }
 }
 
+/* line 79 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+@-webkit-keyframes ball-atom-size {
+
+/* line 80 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    transform: scale(0.5, 0.5);
+  }
+}
+
+/* line 79 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @-o-keyframes ball-atom-size {
-    50% {
-        -o-transform: scale(.5, .5);
-           transform: scale(.5, .5);
-    }
+
+/* line 80 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    transform: scale(0.5, 0.5);
+  }
 }
 
+/* line 79 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @keyframes ball-atom-size {
-    50% {
-        -webkit-transform: scale(.5, .5);
-           -moz-transform: scale(.5, .5);
-             -o-transform: scale(.5, .5);
-                transform: scale(.5, .5);
-    }
+
+/* line 80 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    transform: scale(0.5, 0.5);
+  }
 }
 
-@-webkit-keyframes ball-atom-zindex {
-    50% {
-        z-index: 10;
-    }
-}
-
+/* line 83 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @-moz-keyframes ball-atom-zindex {
-    50% {
-        z-index: 10;
-    }
+
+/* line 84 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    z-index: 10;
+  }
 }
 
+/* line 83 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+@-webkit-keyframes ball-atom-zindex {
+
+/* line 84 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    z-index: 10;
+  }
+}
+
+/* line 83 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @-o-keyframes ball-atom-zindex {
-    50% {
-        z-index: 10;
-    }
+
+/* line 84 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    z-index: 10;
+  }
 }
 
+/* line 83 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @keyframes ball-atom-zindex {
-    50% {
-        z-index: 10;
-    }
+
+/* line 84 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    z-index: 10;
+  }
 }
 
-@-webkit-keyframes ball-atom-shrink {
-    50% {
-        -webkit-transform: translate(-50%, -50%) scale(.8, .8);
-                transform: translate(-50%, -50%) scale(.8, .8);
-    }
-}
-
+/* line 87 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @-moz-keyframes ball-atom-shrink {
-    50% {
-        -moz-transform: translate(-50%, -50%) scale(.8, .8);
-             transform: translate(-50%, -50%) scale(.8, .8);
-    }
+
+/* line 88 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    transform: translate(-50%, -50%) scale(0.8, 0.8);
+  }
 }
 
+/* line 87 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+@-webkit-keyframes ball-atom-shrink {
+
+/* line 88 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    transform: translate(-50%, -50%) scale(0.8, 0.8);
+  }
+}
+
+/* line 87 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @-o-keyframes ball-atom-shrink {
-    50% {
-        -o-transform: translate(-50%, -50%) scale(.8, .8);
-           transform: translate(-50%, -50%) scale(.8, .8);
-    }
+
+/* line 88 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    transform: translate(-50%, -50%) scale(0.8, 0.8);
+  }
 }
 
+/* line 87 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
 @keyframes ball-atom-shrink {
-    50% {
-        -webkit-transform: translate(-50%, -50%) scale(.8, .8);
-           -moz-transform: translate(-50%, -50%) scale(.8, .8);
-             -o-transform: translate(-50%, -50%) scale(.8, .8);
-                transform: translate(-50%, -50%) scale(.8, .8);
-    }
+
+/* line 88 : /home/samps/sites/personal/load-awesome-relative/css/ball-atom.styl */
+  50% {
+    transform: translate(-50%, -50%) scale(0.8, 0.8);
+  }
 }

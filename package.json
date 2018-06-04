@@ -1,33 +1,42 @@
 {
-    "name": "load-awesome",
-    "title": "Load Awesome",
-    "version": "1.1.0",
-    "description": "An awesome collection of — Pure CSS — Loaders and Spinners",
-    "homepage": "http://github.danielcardoso.net/load-awesome/",
-    "repository": "https://github.com/danielcardoso/load-awesome",
-    "main": "load-awesome.js",
-    "author": {
-        "name": "Daniel Cardoso",
-        "twitter": "@DanielCardoso",
-        "homepage": "http://www.danielcardoso.net"
-    },
-    "license": "MIT",
-    "devDependencies": {
-        "grunt": "~0.4.5",
-        "grunt-autoprefixer": "~3.0.3",
-        "grunt-banner": "~0.4.0",
-        "grunt-contrib-clean": "~0.6.0",
-        "grunt-contrib-csslint": "~0.4.0",
-        "grunt-contrib-concat": "~0.5.1",
-        "grunt-contrib-copy": "~0.8.0",
-        "grunt-contrib-jst": "~0.6.0",
-        "grunt-sass": "~1.0.0",
-        "grunt-contrib-uglify": "~0.9.1",
-        "grunt-csscomb": "~3.0.1",
-        "grunt-csscss": "~0.6.2",
-        "grunt-json": "~0.1.5",
-        "grunt-prettify": "~0.4.0",
-        "load-grunt-tasks": "~3.2.0",
-        "time-grunt": "~1.2.1"
-    }
+  "name": "load-awesome-relative",
+  "title": "Load Awesome, redone with Relative Sizing",
+  "version": "0.0.1",
+  "description": "Load Awesome using relative sizing",
+  "homepage": "http://github.danielcardoso.net/load-awesome/",
+  "repository": "https://github.com/danielcardoso/load-awesome-relative",
+  "main": "load-awesome.js",
+  "author": {
+    "name": "Sampon Crowley",
+    "homepage": "http://github.com/SampsonCrowley"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "css-to-stylus-converter": "^1.1.9",
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "~3.0.3",
+    "grunt-banner": "~0.4.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-contrib-csslint": "~0.4.0",
+    "grunt-contrib-jst": "~0.6.0",
+    "grunt-contrib-uglify": "~0.9.1",
+    "grunt-csscomb": "~3.0.1",
+    "grunt-csscss": "~0.6.2",
+    "grunt-json": "~0.1.5",
+    "grunt-prettify": "~0.4.0",
+    "grunt-sass": "~1.0.0",
+    "load-grunt-tasks": "~3.2.0",
+    "nib": "^1.1.2",
+    "stylus": "^0.54.5",
+    "time-grunt": "~1.2.1"
+  },
+  "scripts": {
+    "styles": "stylus -u nib -l ./css/*.styl",
+    "styles:watch": "stylus -u nib -l -w ./css/*.styl",
+    "deploy:reset:assets": "dir=\"$(pwd)\"; echo \"$dir\"; rm \"$dir/docs/assets/loaders.css\"; touch \"$dir/docs/assets/loaders.css\"",
+    "deploy": "yarn styles; yarn deploy:reset:assets; dir=\"$(pwd)\"; cd css; for file in *.styl; do minfile=\"$(echo \"$file\" | sed 's/.styl/.min.css/')\"; echo \"$minfile\"; echo \"$file | $minfile\"; stylus -u nib -c \"$file\" --print > \"$minfile\"; cat \"$minfile\" >> \"$dir/docs/assets/loaders.css\"; done; cd ..",
+    "stylify": "cd css; for file in *.css; do echo \"$file\"; cat \"$file\" | css-to-stylus -u -i 2 -s -o -v > \"$(echo $file | sed 's/.css/.styl/')\"; done; rm *.min.styl; cd .."
+  }
 }

@@ -1,0 +1,89 @@
+/*!
+ * Load Awesome Relative v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Copyright 2018 Sampson Crowley <@SampsonCrowley>
+ * Licensed under MIT
+ */
+@import './mixins/template'
+
++template('.la-ball-atom', 16px)
+  display inline-block
+  float none
+  background-color currentColor
+  border 0 solid currentColor
+
+  &:nth-child(1)
+    position absolute
+    top 50%
+    left 50%
+    z-index 1
+    min-width 60%
+    min-height 60%
+    background #aaa
+    border-radius 100%
+    transform translate(-50%, -50%)
+    animation ball-atom-shrink 4.5s infinite linear
+
+  &:not(:nth-child(1))
+    position absolute
+    left 0
+    z-index 0
+    width 100%
+    height 100%
+    background none
+    animation ball-atom-zindex 1.5s 0s infinite steps(2, end)
+
+    &:before
+      position absolute
+      top 0
+      left 0
+      min-width 30%
+      min-height 30%
+      margin-top -15%
+      margin-left -15%
+      content ""
+      background currentColor
+      border-radius 50%
+      opacity .75
+      animation ball-atom-position 1.5s 0s infinite ease, ball-atom-size 1.5s 0s infinite ease
+
+  &:nth-child(2)
+    animation-delay .75s
+
+    &:before
+      animation-delay 0s, -1.125s
+
+  &:nth-child(3)
+    transform rotate(120deg)
+    animation-delay -.25s
+
+    &:before
+      animation-delay -1s, -.75s
+
+  &:nth-child(4)
+    transform rotate(240deg)
+    animation-delay .25s
+
+    &:before
+      animation-delay -.5s, -.125s
+
+/*
+ * Animations
+ */
+
+@keyframes ball-atom-position
+  50%
+    top 100%
+    left 100%
+
+@keyframes ball-atom-size
+  50%
+    transform scale(.5, .5)
+
+@keyframes ball-atom-zindex
+  50%
+    z-index 10
+
+@keyframes ball-atom-shrink
+  50%
+    transform translate(-50%, -50%) scale(.8, .8)
